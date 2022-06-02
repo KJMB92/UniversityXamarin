@@ -4,24 +4,58 @@
              x:Class="University.App.Views.Forms.LoginView"
              WidthRequest="20" Padding="20"
              xmlns:viewModels="clr-namespace:University.App.ViewModels.Forms"
-             BackgroundColor="DimGray">
+             BackgroundColor="#2196F3">
 
     <ContentPage.BindingContext>
         <viewModels:LoginViewModel/>
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="50" VerticalOptions="Center">
+        <StackLayout Spacing="20" 
+                     Padding="50" 
+                     VerticalOptions="FillAndExpand">
+            <Frame CornerRadius="120" 
+                   BackgroundColor="White" 
+                   HeightRequest="200" 
+                   WidthRequest="100">
+                <Image Source="ImageLogin"/>
+            </Frame>
 
-            <Image Source="ImageLogin" HeightRequest="100" WidthRequest="100"/>
+            <Label Text="Ingreso"
+                   HorizontalOptions="Center"
+                   FontSize="40"
+                   TextColor="White"
+                   FontAttributes="Bold"/>
 
-            <Entry Placeholder="Email" Text="{Binding Email}" />
-            <Entry Placeholder="Password" IsPassword="True" Text="{Binding Password}"/>
-            <Button Text="Log In" TextColor="Black" BackgroundColor="Aqua" Command="{Binding LoginCommand}" />
+            <Entry Placeholder="Email" 
+                   Text="{Binding Email}"
+                   TextColor="White"
+                   PlaceholderColor="White"/>
+
+            <Entry Placeholder="Password" 
+                   IsPassword="True" 
+                   Text="{Binding Password}"
+                   TextColor="White"
+                   PlaceholderColor="White"/>
+
+            <Button Text="Log In" 
+                    TextColor="Black" 
+                    BackgroundColor="White" 
+                    CornerRadius="10"
+                    Command="{Binding LoginCommand}"/>
 
             <Grid>
-            <Button Text="Register" TextColor="Black"  BackgroundColor="Transparent" HorizontalOptions="Start" Command="{Binding RegisterCommand}" />
-            <Button Text="Forgot Password" TextColor="Navy"  BackgroundColor="Transparent" HorizontalOptions="End" Command="{Binding ForgotPasswordCommand}" />
+                <Button Text="Register" 
+                        TextColor="White"  
+                        BackgroundColor="Transparent" 
+                        HorizontalOptions="Start" 
+                        Command="{Binding RegisterCommand}"/>
+
+                <Button Text="Forgot Password" 
+                        TextColor="White"  
+                        BackgroundColor="Transparent" 
+                        HorizontalOptions="End" 
+                        Command="{Binding ForgotPasswordCommand}" />
             </Grid>
         </StackLayout>
     </ContentPage.Content>

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="University.App.Views.Forms.RegisterPage"
              xmlns:viewModels="clr-namespace:University.App.ViewModels.Forms"
-             WidthRequest="100" Padding="50">
+             WidthRequest="100" Padding="50"
+             BackgroundColor="#2196F3">
 
     <ContentPage.BindingContext>
         <viewModels:RegisterViewModel/>
@@ -11,40 +12,59 @@
 
     <ContentPage.Content>
         <ScrollView>
-        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Center" Spacing="20">
-            
-                <Image Source="EmployeesHell" IsAnimationPlaying="true" HorizontalOptions="Center"/>
+            <StackLayout Spacing="20">
 
-                <Label Text="Register" HorizontalOptions="Center" FontSize="30"/>
 
-                <Grid BackgroundColor="DarkRed">
-                    <Label Text="Email" HorizontalOptions="Start" FontSize="20" VerticalTextAlignment="Center" Padding="10" />
-                    <Entry Placeholder="enter email" HorizontalOptions="EndAndExpand" WidthRequest="190" Text="{Binding Email}"/>
+                <Image Source="HomeroPlaya" 
+                       IsAnimationPlaying="true" 
+                       HorizontalOptions="Center"/>
+
+                <Label Text="Register" 
+                       HorizontalOptions="Center" 
+                       TextColor="White" 
+                       FontSize="40"/>
+
+
+                <Grid>
+                    <Label Text="Email" 
+                           TextColor="White" 
+                           HorizontalOptions="Start" 
+                           FontSize="20" 
+                           VerticalTextAlignment="Center" 
+                           Padding="10" />
+
+                    <Entry Placeholder="enter email" 
+                           TextColor="White" 
+                           PlaceholderColor="White" 
+                           HorizontalOptions="EndAndExpand" 
+                           WidthRequest="190" 
+                           Text="{Binding Email}"/>
                 </Grid>
 
-                <Grid BackgroundColor="DarkRed">
-                    <Label Text="Password" HorizontalOptions="Start" FontSize="20" VerticalTextAlignment="Center" Padding="10"/>
-                    <Entry Placeholder="enter password" IsPassword="True" HorizontalOptions="EndAndExpand" WidthRequest="190" Text="{Binding Password}"/>
+                <Grid>
+                    <Label Text="Password" 
+                           TextColor="White" 
+                           HorizontalOptions="Start" 
+                           FontSize="20" 
+                           VerticalTextAlignment="Center" 
+                           Padding="10"/>
+
+                    <Entry Placeholder="enter password" 
+                           TextColor="White" 
+                           PlaceholderColor="White" 
+                           IsPassword="True" 
+                           HorizontalOptions="EndAndExpand" 
+                           WidthRequest="190" 
+                           Text="{Binding Password}"/>
                 </Grid>
 
-                <Button Text="Register" CornerRadius="10" BackgroundColor="Red" TextColor="White" Command="{Binding RegisterCommand}"/>
+                <Button Text="Register" 
+                        CornerRadius="10" 
+                        BackgroundColor="White" 
+                        TextColor="Black" Command="{Binding RegisterCommand}"/>
 
+                <Label HeightRequest="120"/>
 
-                <Image Source="HomeroPlaya" IsAnimationPlaying="true" HorizontalOptions="Center"/>
-
-                <Label Text="Otros Datos" HorizontalOptions="Center" FontSize="30"/>
-
-                <Grid BackgroundColor="DarkRed">
-                    <Label Text="Nombres" HorizontalOptions="Start" FontSize="20" VerticalTextAlignment="Center" Padding="10" />
-                    <Entry Placeholder="enter first name" HorizontalOptions="EndAndExpand" WidthRequest="190" Text="{Binding FirstName}"/>
-                </Grid>
-
-                <Grid BackgroundColor="DarkRed">
-                    <Label Text="Apellidos" HorizontalOptions="Start" FontSize="20" VerticalTextAlignment="Center" Padding="10"/>
-                    <Entry Placeholder="enter last name" IsPassword="True" HorizontalOptions="EndAndExpand" WidthRequest="190" Text="{Binding LastName}"/>
-                </Grid>
-
-                <Button Text="Register" CornerRadius="10" BackgroundColor="Red" TextColor="White" Command="{Binding RegisterOtersDataCommand}"/>
 
 
 
